@@ -1,8 +1,0 @@
-SimpleWorker allows use web workers in a very simple way.
-
-SimpleWorker(function(){
-  // hard calculations
-  return 12345; // result
-}, function(result){
-  alert('The result is: ' + result);
-});

@@ -1,7 +1,7 @@
 
 var workHard = function(){
   var hit = 0;
-  var num = 1e9;
+  var num = 1e8;
   for( var i = 0; i < num; ++i ){
     if( Math.pow(Math.random(), 2) + Math.pow(Math.random(), 2) < 1 ){
       ++hit;
@@ -25,7 +25,6 @@ var Counter = function(){
 };
 
 (function(){
-  return;
   var tasks = [
 
     function(cb){

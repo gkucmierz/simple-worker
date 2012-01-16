@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+(function fn(){
+  window.onload = function(){
+    var cnt = parseInt(document.querySelector('span').innerHTML, 10) + 1;
+
+    var data = 'data:text/html;base64,' + btoa([
+      atob('PCFET0NUWVBFIGh0bWw+CjxodG1sPgogIDxoZWFkPgogICAgPHRpdGxlPg=='),
+      'title ' + Math.random(),
+      atob('PC90aXRsZT4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04IiAvPgogICAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgoo'),
+      fn.toString(),
+      atob('KSgpOwogICAgPC9zY3JpcHQ+CiAgPC9oZWFkPgoKICA8Ym9keT4KICAgIDxhIGhyZWY9IiI+bGluayB0byB0aGlzIHBhZ2U8L2E+CiAgICA8cD4KICAgICAgY291bnRlcjogPHNwYW4+'),
+      cnt,
+      atob('PC9zcGFuPgogICAgPC9wPgogIDwvYm9keT4KPC9odG1sPg=='),
+    ].join(''));
+
+    document.querySelector('a').href = data;
+
+    setTimeout(function(){
+      var evt = document.createEvent('MouseEvents');
+      evt.initMouseEvent('click');
+      document.querySelector('a').dispatchEvent(evt);
+    }, 100);
+  };
+})();
+    </script>
+  </head>
+
+  <body>
+    <a href="">link to this page</a>
+    <p>
+      counter: <span>0</span>
+    </p>
+  </body>
+</html>

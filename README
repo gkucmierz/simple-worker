@@ -1,4 +1,4 @@
-SimpleWorker can allows use web workers in a very simple way.
+SimpleWorker allows use web workers in a very simple way.
 
 SimpleWorker(function(){
   // hard calculations
